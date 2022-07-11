@@ -29,35 +29,18 @@ In 2018, only two of the stock choices had positive yearly returns, ENPH and RUN
 
 The refactored code ran much faster than the previous code that was developed during the asynchronous modules. While the first code was valuable to teach nested loops, it ran very slowly. The refactored showed how to use arrays to avoid having to loop so many times.
 
-The first loop showed where to put the results, and the second loop checked conditions and then added to the volume and/or set the starting or ending price.  
-
 ## Original Code
 
-### Loop 1
-**Resetting variables and then printing results from Loop 2**
+There were nested loops in the original VBA script. The first loop reset variables for each new ticker and printed the results from the nested second loop. The second loop went through every line of the data set to check the if-then conditions. The second loop kept going to the end of the data sheet, even when we had already found the ending price. 
+
+**Loop through all data 12 times**
 
 ```
-For i = 0 To 11
+ For i = 0 To 11
     
     ticker = tickers(i)
     totalVolume = 0
-```    
-    [Loop 2]
-```    
-    'output results
-    Worksheets("All Stocks Analysis").Activate
     
-    Cells(4 + i, 1).Value = ticker
-    Cells(4 + i, 2).Value = totalVolume
-    Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
-    
-Next i
-```
-
-### Loop 2
-**Looping through all data and deciding whether to increase volume and/or set the start and end price**
-
-```
     For j = 2 To RowCount
         'activate data worksheet
         Worksheets(yearValue).Activate
@@ -78,6 +61,16 @@ Next i
         End If
         
     Next j
+    
+    'output results
+    Worksheets("All Stocks Analysis").Activate
+    
+    Cells(4 + i, 1).Value = ticker
+    Cells(4 + i, 2).Value = totalVolume
+    Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+    
+Next i
+
 ```  
 
 It wasted time to keep looping through every row of data even after the end cell had been found and assigned. 
@@ -85,6 +78,8 @@ It wasted time to keep looping through every row of data even after the end cell
 ## Refactored Code
 
 The refactored code uses arrays to store the results for each ticker and then prints them all in cells at the end. Using an array is useful because we only need one loop statement that goes through the data. The `tickerIndex` variable keeps the place of all the arrays at once. This variable advances after the end price is found, and because our ticker array and our ticker data are arranged in alphabetical order, this brings up the next ticker. We only have to loop through the data one time rather than 12 times.
+
+**When we have the ending price of the current ticker, start looking for the next ticker**
 
 ```
        If tickers(tickerIndex) = Cells(i, 1).Value And tickers(tickerIndex) <> Cells(i + 1, 1).Value Then

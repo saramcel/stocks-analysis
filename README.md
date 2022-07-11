@@ -100,17 +100,21 @@ The refactored code was much faster than the original code for both years of ana
 ### 2017 Analysis
 
 **Original Time**
+
 ![Original VBA stocks analysis 2017 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Original_2017.png)
 
 **Refactored Time**
+
 ![Refactored VBA stocks analysis 2017 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Challenge_2017.png)
 
 ### 2018 Analysis
 
 **Original Time**
+
 ![Original VBA stocks analysis 2018 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Original_2018.png)
 
 **Refactored Time**
+
 ![Refactored VBA stocks analysis 2018 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Challenge_2018.png)
 
 

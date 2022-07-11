@@ -17,11 +17,11 @@ Steve wants to help his parents invest in green stocks. They started with one st
 
 The green stocks that Steve selected changed performance from 2017 to 2018. 
 
-![VBA stocks analysis 2017 result](link.png)
+![VBA stocks analysis 2017 result](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/Results_2017.png)
 
 Most of the stocks, with the exception of TERP, showed a positive return in 2017. The stocks DQ, ENPH, FSLR, and SEDG all had yearly returns over 100% in 2017. The highest traded stocks in 2017 were SPWR, FSLR, CSIQ, and RUN. 
 
-![VBA stocks analysis 2018 result](link.png)
+![VBA stocks analysis 2018 result](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/Results_2018.png)
 
 In 2018, only two of the stock choices had positive yearly returns, ENPH and RUN. The highest traded stocks in 2018 were ENPH, SPWR, RUN, and FSLR. 
 
@@ -95,16 +95,24 @@ The refactored code uses arrays to store the results for each ticker and then pr
 
 ## Run Time Improvement
 
-The refactored code was much faster than the original code for both years of analysis. Please see resulting message boxes below for details. 
+The refactored code was much faster than the original code for both years of analysis. The user can perceive the difference in speed. Please see resulting message boxes below for details. 
 
-![Original VBA stocks analysis 2017 run time](link.png)
-![Refactored VBA stocks analysis 2017 run time](link.png)
+### 2017 Analysis
 
+**Original Time**
+![Original VBA stocks analysis 2017 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Original_2017.png)
 
-![Original VBA stocks analysis 2018 run time](link.png)
-![Refactored VBA stocks analysis 2018 run time](link.png)
+**Refactored Time**
+![Refactored VBA stocks analysis 2017 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Challenge_2017.png)
 
-The user can perceive the difference in speed. 
+### 2018 Analysis
+
+**Original Time**
+![Original VBA stocks analysis 2018 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Original_2018.png)
+
+**Refactored Time**
+![Refactored VBA stocks analysis 2018 run time](https://github.com/saramcel/stocks-analysis/blob/1964cbe9bce9b7ca64f2a125c185ef4f24889571/Resources/VBA_Challenge_2018.png)
+
 
 # Summary
 
